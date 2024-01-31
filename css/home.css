@@ -1,0 +1,113 @@
+/* Base styles for mobile devices */
+
+.header_wrapper-items {
+    max-width: calc(100% - 124px);
+    text-align: center;
+}
+
+.header_wrapper-h1 {
+    color: #111;
+    margin: 0;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.header_wrapper-p {
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.6;
+    display: block;
+}
+
+.socials_icons-wrapper {
+    width: 40px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 15px 35px;
+    background-color: rgb(250, 207, 15);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #111;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button-projects {
+    font-size: 18px;
+}
+
+.email-icon_wrapper {
+    text-align: center;
+}
+
+.font-awesome_email-icon {
+    font-size: 32px;
+    color: black;
+    padding: 7px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.socials_icons-img {
+    width: 30px;
+    padding: 3px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.socials_icons-img:hover,
+.font-awesome_email-icon:hover {
+    background-color: rgb(255, 240, 174);
+}
+
+/* Tablet and desktop styles - use min-width to apply these styles for screens larger than 650px */
+@media only screen and (min-width: 650px) {
+    .socials_icons-wrapper {
+        width: 50px;
+    }
+
+    .socials_icons-img {
+        width: 40px;
+        padding: 5px;
+    }
+
+    .font-awesome_email-icon {
+        font-size: 41px;
+        padding: 7px;
+    }
+}
+
+/* Additional desktop styles - use min-width to apply these styles for screens larger than 900px */
+@media only screen and (min-width: 900px) {
+    .header_wrapper-h1 {
+        font-size: 56px;
+        letter-spacing: 2px;
+    }
+
+    .header_wrapper-items {
+        max-width: calc(100% - 250px);
+    }
+}

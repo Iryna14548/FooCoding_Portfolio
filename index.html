@@ -3,18 +3,94 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Portfolio Iryna Romanovych</title>
+
+        <link rel="stylesheet" href="./css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <link rel="stylesheet" type="text/css" href="./css/navigation.css" />
+        <link rel="stylesheet" type="text/css" href="./css/home.css" />
+        <link rel="stylesheet" type="text/css" href="./css/about.css" />
+        <link rel="stylesheet" type="text/css" href="./css/projects.css" />
+        <link rel="stylesheet" type="text/css" href="./css/footer.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="link">Home</a></li>
-                <li><a href="about.html" class="link">About</a></li>
-            </ul>
+        <nav class="navigation_wrapper">
+            <div class="navigation_wrapper-header">
+                <div class="navigation_wrapper-left-side">
+                    <a href="./index.html"
+                        ><img src="./images/IMG_20221029_194317.jpg" alt="Photo" class="portfolio_photo"
+                    /></a>
+
+                    <span class="logo_name">Iryna Romanovych</span>
+                </div>
+                <ul class="navigation_wrapper-right-side">
+                    <li><a href="/pages/home.html" class="active js-link">Home</a></li>
+                    <li><a href="/pages/about.html" class="js-link">About</a></li>
+                    <li><a href="/pages/projects.html" class="js-link">Projects</a></li>
+                    <li><a href="/pages/contact.html" class="js-link">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <i class="fa-solid fa-bars js-burger"></i>
+                    <i class="fa-solid fa-xmark hidden js-close-icon"></i>
+                </div>
+                <div class="menu">
+                    <ul class="menu_list">
+                        <li class="menu_list-items js-menu_list-items">
+                            <a href="/pages/home.html" class="js-link">Home</a>
+                        </li>
+                        <li class="menu_list-items js-menu_list-items">
+                            <a href="/pages/about.html" class="js-link">About</a>
+                        </li>
+                        <li class="menu_list-items js-menu_list-items">
+                            <a href="/pages/projects.html" class="js-link">Projects</a>
+                        </li>
+                        <li class="menu_list-items js-menu_list-items">
+                            <a href="/pages/contact.html" class="js-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <div id="content">
-            <h1>Welcome</h1>
-        </div>
+
+        <div id="content" class="header_wrapper js-menu-items hero"></div>
+
+        <footer id="contact" class="footer_wrapper">
+            <div class="footer_wrapper-items">
+                <div>
+                    <h2 class="footer_h2">Iryna Romanovych</h2>
+                    <p class="footer_p">
+                        A Frontend focused Web Developer building the Frontend of Websites that leads to the
+                        success of the overall product
+                    </p>
+                </div>
+                <div class="footer_wrapper-left">
+                    <h2 class="footer_h2">Social</h2>
+                    <div class="footer_wrapper-icons">
+                        <a href="https://www.linkedin.com/in/iryna-romanovych-a91477276/" target="_blank"
+                            ><img
+                                src="./images/linkedin-dark.svg"
+                                alt="Iryna Romanovych Linkdin Profile"
+                                class="footer_socials_icon-img"
+                        /></a>
+                        <a href="https://github.com/Iryna14548" target="_blank"
+                            ><img
+                                src="./images/github-dark.svg"
+                                alt="Iryna14548 Github Profile"
+                                class="footer_socials_icon-img"
+                        /></a>
+                        <a href="mailto: ira.14548@gmail.com" target="_blank"
+                            ><i class="fa-solid fa-square-envelope footer_socials_icon-img-email"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
         <script src="script.js"></script>
+        <script src="menu.js"></script>
     </body>
 </html>

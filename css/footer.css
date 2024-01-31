@@ -1,0 +1,72 @@
+/* Base styles for mobile devices */
+.footer_wrapper {
+    background-color: #252525;
+}
+
+.footer_wrapper-items {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.footer_wrapper-left {
+    margin: 0 0 50px;
+}
+
+.footer_h2 {
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer_p {
+    max-width: 480px;
+    font-size: 16px;
+    color: white;
+}
+
+.footer_wrapper-icons {
+    display: inline-flex;
+    gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.footer_socials_icon-img {
+    width: 50px;
+    color: white;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.footer_socials_icon-img-email {
+    font-size: 50px;
+    color: black;
+    padding-right: 3.2px;
+    transition: background-color 0.3s;
+}
+
+.footer_socials_icon-img:hover,
+.footer_socials_icon-img-email:hover {
+    background-color: rgb(255, 240, 174);
+}
+
+/* Tablet and desktop styles - use min-width to apply these styles for screens larger than 900px */
+@media only screen and (min-width: 900px) {
+    .footer_wrapper-items {
+        display: flex;
+        padding: 80px 30px;
+        flex-direction: row;
+    }
+
+    .footer_wrapper-icons {
+        display: flex;
+    }
+
+    .footer_wrapper-left {
+        margin: auto;
+    }
+}

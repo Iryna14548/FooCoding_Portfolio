@@ -1,0 +1,61 @@
+/* Base styles for mobile devices */
+.section__wrapper-content-project {
+    flex: 1;
+}
+
+.button_project-link {
+    margin: 0;
+    align-self: center;
+}
+
+.wrapper_projects {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.wrapper_projects > div {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    margin: 16px;
+    background-color: white;
+    border-radius: 24px;
+}
+
+/* .project-item {
+    margin-bottom: 70px;
+} */
+
+.project-item__header {
+    margin: 0;
+}
+
+.comp_screen_photo {
+    max-width: 540px;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Tablet and desktop styles - use min-width to apply these styles for screens larger than 900px */
+@media only screen and (min-width: 900px) {
+    .wrapper_projects {
+        gap: 8px;
+    }
+
+    .wrapper_projects > div {
+        width: calc(50% - 84px);
+    }
+
+    .project-item {
+        margin-bottom: 0;
+    }
+
+    .comp_screen_photo {
+        margin: 0;
+    }
+}
