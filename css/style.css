@@ -1,9 +1,29 @@
+html {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+button {
+    font-family: 'Source Sans Pro', sans-serif;
+    cursor: pointer;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
 .header_wrapper {
     min-height: calc(100vh - 461px);
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     padding: 48px 0;
 }
 

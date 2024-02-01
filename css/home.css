@@ -1,5 +1,11 @@
 /* Base styles for mobile devices */
 
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header_wrapper-items {
     max-width: calc(100% - 124px);
     text-align: center;
@@ -80,7 +86,7 @@
 
 .socials_icons-img:hover,
 .font-awesome_email-icon:hover {
-    background-color: rgb(255, 240, 174);
+    background: rgb(248 76 76 / 20%);
 }
 
 /* Tablet and desktop styles - use min-width to apply these styles for screens larger than 650px */

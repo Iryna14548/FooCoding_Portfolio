@@ -51,7 +51,7 @@
 
 .footer_socials_icon-img:hover,
 .footer_socials_icon-img-email:hover {
-    background-color: rgb(255, 240, 174);
+    background: rgb(248 76 76 / 20%);
 }
 
 /* Tablet and desktop styles - use min-width to apply these styles for screens larger than 900px */
