@@ -16,6 +16,10 @@ async function getHTML(url) {
             initializeLoginForm();
         }
 
+        if (initializeContactForm) {
+            initializeContactForm();
+        }
+
         window.scrollTo({ top: 0, behavior: 'smooth' });
         //window.history.pushState({ html: response.html, pageTitle: response.pageTitle }, '', url);
     } catch (error) {

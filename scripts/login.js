@@ -1,3 +1,5 @@
+'use strict';
+
 // Login Form
 const validUsername = 'admin';
 const validPassword = 'password';

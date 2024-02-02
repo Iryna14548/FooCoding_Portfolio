@@ -1,3 +1,5 @@
+'use strict';
+
 let burgerIcon = document.querySelector('.js-burger');
 let closeIcon = document.querySelector('.js-close-icon');
 let menu = document.querySelector('.menu');

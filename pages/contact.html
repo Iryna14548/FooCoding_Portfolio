@@ -2,9 +2,9 @@
     <h2 class="section-h2">Contact Me</h2>
     <p class="section-p contact__p">I'd love to hear from you!</p>
 
-    <form action="form" class="contact__form">
-        <label for="uname"><b class="login__label">Username</b></label>
-        <input type="text" id="conact__name" name="fname" placeholder="Name" class="contact__input" />
+    <form action="form" class="contact__form" id="js-contactForm">
+        <label for="uname"><b class="login__label">Name</b></label>
+        <input type="text" id="conact__name" name="name" placeholder="Name" class="contact__input" />
         <label for="uname"><b class="login__label">Email Address</b></label>
         <input
             type="email"
@@ -13,7 +13,7 @@
             placeholder="Email Address"
             class="contact__input"
         />
-        <label for="uname"><b class="login__label">Phone number</b></label>
+        <label for="phone"><b class="login__label">Phone number</b></label>
         <input
             type="phone"
             name="phone"
@@ -31,6 +31,6 @@
             placeholder="Enter your message..."
             required
         ></textarea>
+        <button type="submit" class="button contact__button">Send message</button>
     </form>
-    <button type="button" class="button contact__button">Send message</button>
 </section>

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "serve",
+    "dev-server": "nodemon server/server.js",
     "start-server": "node server/server.js"
   },
   "repository": {
@@ -20,6 +21,10 @@
   "homepage": "https://github.com/Iryna14548/FooCoding_Portfolio#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "mongoose": "^8.1.1",
     "serve": "^14.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 }
