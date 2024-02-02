@@ -13,6 +13,8 @@ async function getHTML(url) {
 
         document.title = response.pageTitle;
         initialize();
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         //window.history.pushState({ html: response.html, pageTitle: response.pageTitle }, '', url);
     } catch (error) {
         console.error('Fetch error:', error);

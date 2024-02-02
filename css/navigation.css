@@ -67,6 +67,12 @@
     text-decoration: none;
 }
 
+.navigation__item--login {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgb(248, 203, 0);
+}
+
 .burger {
     display: block;
     cursor: pointer;

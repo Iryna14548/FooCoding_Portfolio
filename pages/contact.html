@@ -3,7 +3,9 @@
     <p class="section-p contact__p">I'd love to hear from you!</p>
 
     <form action="form" class="contact__form">
+        <label for="uname"><b class="login__label">Username</b></label>
         <input type="text" id="conact__name" name="fname" placeholder="Name" class="contact__input" />
+        <label for="uname"><b class="login__label">Email Address</b></label>
         <input
             type="email"
             name="email"
@@ -11,6 +13,7 @@
             placeholder="Email Address"
             class="contact__input"
         />
+        <label for="uname"><b class="login__label">Phone number</b></label>
         <input
             type="phone"
             name="phone"
@@ -26,6 +29,7 @@
             rows="5"
             class="contact__input contact__textarea"
             placeholder="Enter your message..."
+            required
         ></textarea>
     </form>
     <button type="button" class="button contact__button">Send message</button>
