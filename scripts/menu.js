@@ -35,16 +35,3 @@ if (mobileMenuItems.length > 0) {
         });
     });
 }
-
-// let menuListItems = document.querySelectorAll('.js-link');
-
-// if (menuListItems) {
-//     menuListItems.forEach((item) => {
-//         item.addEventListener('click', () => {
-//             menuListItems.forEach((item) => {
-//                 item.classList.remove('active');
-//             });
-//             item.classList.add('active');
-//         });
-//     });
-// }

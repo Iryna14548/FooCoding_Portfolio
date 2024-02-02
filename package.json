@@ -5,7 +5,8 @@
   "main": "menu.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve"
+    "start": "serve",
+    "start-server": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/Iryna14548/FooCoding_Portfolio#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "serve": "^14.2.1"
   }
 }

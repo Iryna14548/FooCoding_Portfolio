@@ -1,26 +1,30 @@
 <section class="contact section_wrapper">
     <h2 class="section-h2">Welcome</h2>
 
-    <form action="form" class="contact__form">
-        <label for="uname"><b class="login__label">Username</b></label>
+    <form action="form" class="contact__form" id="js-loginForm">
+        <label for="username"><b class="login__label">Username</b></label>
         <input
             type="text"
             id="contact__name"
             placeholder="Enter Username"
-            name="uname"
+            name="username"
             class="contact__input"
             required
         />
 
-        <label for="psw"><b class="login__label">Password</b></label>
+        <label for="password"><b class="login__label">Password</b></label>
         <input
             type="password"
             placeholder="Enter Password"
-            name="psw"
+            name="password"
             id="contact__email"
             class="contact__input"
             required
         />
+        <button type="submit" class="button contact__button">Sign in</button>
+
+        <div id="snackbar">Login failed. Try again.</div>
     </form>
-    <button type="button" class="button contact__button">Sign in</button>
+    <script src="./../login.js"></script>
+    <script src="http://localhost:3000/login.js"></script>
 </section>

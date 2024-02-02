@@ -1,5 +1,4 @@
 'use strict';
-//const hostingPath = 'https://iryna14548.github.io/FooCoding_Portfolio/';
 
 async function getHTML(url) {
     try {
@@ -11,8 +10,11 @@ async function getHTML(url) {
         const responseHtml = await response.text();
         contentDiv.innerHTML = responseHtml;
 
-        document.title = response.pageTitle;
-        initialize();
+        initializeClickEvents();
+
+        if (initializeLoginForm) {
+            initializeLoginForm();
+        }
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
         //window.history.pushState({ html: response.html, pageTitle: response.pageTitle }, '', url);
@@ -37,17 +39,10 @@ function linkClick(event) {
     getHTML(pathName);
 }
 
-const initialize = () => {
+const initializeClickEvents = () => {
     const links = document.getElementsByClassName('js-link');
     for (let i = 0; i < links.length; i++) {
-        if (links[i].linkClickListener) {
-            links[i].removeEventListener('click', links[i].linkClickListener);
-        }
-        links[i].linkClickListener = linkClick; // Store the reference
-        links[i].addEventListener('click', links[i].linkClickListener, false);
+        links[i].removeEventListener('click', linkClick);
+        links[i].addEventListener('click', linkClick, false);
     }
 };
-
-//(function () {
-//getHTML('pages/home');
-//})();
