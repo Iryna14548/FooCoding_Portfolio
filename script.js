@@ -25,21 +25,16 @@ getHTML('/pages/home');
 
 function linkClick(event) {
     event.preventDefault();
+    const pathName = new URL(this.href).pathname;
 
-    const currentUrl = window.location; // Gets the current URL
-    const url = new URL(this.href, currentUrl.origin); // Resolves the full URL against the current origin
-    let fullUrl = url.href.substring(url.origin.length); // Extracts the part after the domain
-
-    // Extract the pathname from the URL
-    let pagePath = url.pathname;
     document.querySelectorAll('.js-link').forEach((item) => {
         item.classList.remove('active');
     });
-    document.querySelectorAll(`[href*="${pagePath}"]`).forEach((item) => {
+    document.querySelectorAll(`[href*="${pathName}"]`).forEach((item) => {
         item.classList.add('active');
     });
 
-    getHTML(fullUrl);
+    getHTML(pathName);
 }
 
 const initialize = () => {
