@@ -21,12 +21,11 @@ async function getHTML(url) {
     }
 }
 
-getHTML('/pages/home');
+getHTML(window.location.href + '/pages/home');
 
 function linkClick(event) {
     event.preventDefault();
 
-    debugger;
     const currentUrl = window.location; // Gets the current URL
     const url = new URL(this.href, currentUrl.origin); // Resolves the full URL against the current origin
     let fullUrl = url.href.substring(url.origin.length); // Extracts the part after the domain
