@@ -3,7 +3,7 @@
 
 async function getHTML(url) {
     try {
-        const response = await fetch(url, { method: 'GET' });
+        const response = await fetch(window.location.href + url, { method: 'GET' });
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -21,7 +21,7 @@ async function getHTML(url) {
     }
 }
 
-getHTML(window.location.href + '/pages/home');
+getHTML('/pages/home');
 
 function linkClick(event) {
     event.preventDefault();
