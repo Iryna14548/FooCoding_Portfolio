@@ -3,7 +3,7 @@
 
 async function getHTML(url) {
     try {
-        const response = await fetch(window.location.href + url, { method: 'GET' });
+        const response = await fetch(url, { method: 'GET' });
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -26,7 +26,11 @@ getHTML('/pages/home');
 function linkClick(event) {
     event.preventDefault();
 
-    const url = new URL(this.href);
+    debugger;
+    const currentUrl = window.location; // Gets the current URL
+    const url = new URL(this.href, currentUrl.origin); // Resolves the full URL against the current origin
+    let fullUrl = url.href.substring(url.origin.length); // Extracts the part after the domain
+
     // Extract the pathname from the URL
     let pagePath = url.pathname;
     document.querySelectorAll('.js-link').forEach((item) => {
@@ -36,7 +40,7 @@ function linkClick(event) {
         item.classList.add('active');
     });
 
-    getHTML(this.href);
+    getHTML(fullUrl);
 }
 
 const initialize = () => {
