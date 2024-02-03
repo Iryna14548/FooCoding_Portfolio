@@ -34,15 +34,20 @@ const submitContactForm = async (contactForm) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-    }).then(async (response) => {
-        // ToDo:
-        // Show snackbar with OK message
-        // Clear form
+    }).then((response) => {
+        if (response.ok) {
+            contactForm.reset();
+            const snackbar = document.getElementById('snackbar');
+            snackbar.className = 'show snackbar--green';
+            setTimeout(function () {
+                snackbar.className = '';
+            }, 3000);
+        }
     });
 };
 
 const getAllContactForms = async () => {
-    fetch(HOSTING_PATH + '/contacts?siteId=Iryna', {
+    return fetch(HOSTING_PATH + '/contacts?siteId=Iryna', {
         method: 'GET',
-    }).then(async (response) => {});
+    });
 };

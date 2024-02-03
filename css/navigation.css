@@ -8,6 +8,7 @@
 
 .navigation_wrapper-header {
     display: flex;
+
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -148,7 +149,7 @@
 }
 
 /* Tablet styles - use min-width to apply these styles for screens larger than 650px */
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 700px) {
     .navigation_wrapper-right-side {
         display: flex;
     }
@@ -163,7 +164,7 @@
 }
 
 /* Desktop styles - use min-width to apply these styles for screens larger than 900px */
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1064px) {
     .navigation_wrapper {
         height: 84px;
     }

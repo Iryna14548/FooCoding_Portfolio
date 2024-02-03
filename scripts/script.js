@@ -10,15 +10,7 @@ async function getHTML(url) {
         const responseHtml = await response.text();
         contentDiv.innerHTML = responseHtml;
 
-        initializeClickEvents();
-
-        if (initializeLoginForm) {
-            initializeLoginForm();
-        }
-
-        if (initializeContactForm) {
-            initializeContactForm();
-        }
+        initializePage();
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
         //window.history.pushState({ html: response.html, pageTitle: response.pageTitle }, '', url);
@@ -48,5 +40,21 @@ const initializeClickEvents = () => {
     for (let i = 0; i < links.length; i++) {
         links[i].removeEventListener('click', linkClick);
         links[i].addEventListener('click', linkClick, false);
+    }
+};
+
+const initializePage = () => {
+    initializeClickEvents();
+
+    if (initializeLoginForm) {
+        initializeLoginForm();
+    }
+
+    if (initializeContactForm) {
+        initializeContactForm();
+    }
+
+    if (initializeAdminPage) {
+        initializeAdminPage();
     }
 };
