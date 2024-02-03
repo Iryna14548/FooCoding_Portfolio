@@ -18,6 +18,10 @@ const contactSchema = new mongoose.Schema(
             type: String,
             required: [true, 'Message is required'],
         },
+        siteId: {
+            type: String,
+            required: [true, 'siteId is required'],
+        },
     },
     {
         timestamps: true,

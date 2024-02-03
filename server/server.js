@@ -1,9 +1,16 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const Contact = require('../models/contactModel');
 const app = express();
+const cors = require('cors');
+
+const MONGO_URL = process.env.MONGO_URL;
+const PORT = process.env.PORT || 3006;
 
 // Middlewares
-app.use(express.json()); // for parsing application/json
+app.use(cors());
+app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // CORS Middleware to handle preflight requests
@@ -21,35 +28,37 @@ app.use((req, res, next) => {
 });
 
 //routes
-app.get('/contact', (req, res) => {
-    // allow cors
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+app.get('/contacts', async (req, res) => {
+    try {
+        const { siteId } = req.query;
+        if (!siteId) return res.status(400).json({ message: 'siteId is required' });
 
-    res.send({
-        name: 'Iryna2',
-        age: 25,
-    });
+        const contactForms = await Contact.find({
+            siteId: siteId,
+        });
+        res.status(200).json(contactForms);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: err.message });
+    }
 });
 
-app.post('/contact', (req, res) => {
-    // allow cors for post
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-
-    console.log(req.body);
-    console.log('Contact form submitted');
-    res.send('Contact form submitted');
+app.post('/contact', async (req, res) => {
+    try {
+        const contactForm = await Contact.create(req.body);
+        res.status(200).json({ contactForm });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: err.message });
+    }
 });
 
 mongoose
-    .connect(
-        'mongodb+srv://ira14548:Zg9qU5uDel0KGhHW@formsubmissionsapi.8bauwk7.mongodb.net/Node-API?retryWrites=true&w=majority'
-    )
+    .connect(MONGO_URL)
     .then(() => {
         console.log('Connected to MongoDB');
-        app.listen(3006, () => {
-            console.log('Server is running on port 3006');
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
         });
     })
     .catch((err) => {

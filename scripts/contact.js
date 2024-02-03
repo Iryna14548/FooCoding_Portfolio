@@ -19,6 +19,7 @@ const initializeContactForm = () => {
                 email: email,
                 phone: phone,
                 message: message,
+                siteId: 'Iryna',
             };
 
             fetch(hostingPath + '/contact', {
