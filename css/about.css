@@ -62,6 +62,10 @@
     margin-bottom: 10px;
 }
 
+.section_content-about {
+    display: flex;
+    gap: 16px;
+}
 .linledin_link {
     color: rgb(248, 203, 0);
 }
